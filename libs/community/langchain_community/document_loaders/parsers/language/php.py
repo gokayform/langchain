@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 CHUNK_QUERY = """
   [
     (class_declaration) @class
-    (function_declaration) @function
+    (function_definition) @function
     (trait_declaration) @trait
   ]
 """.strip();

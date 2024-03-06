@@ -9,11 +9,12 @@ if TYPE_CHECKING:
 
 
 CHUNK_QUERY = """
-    [
-        (function_declaration) @function
-        (class_declaration) @class
-    ]
-""".strip()
+  [
+    (class_declaration) @class
+    (function_declaration) @function
+    (trait_declaration) @trait
+  ]
+""".strip();
 
 
 class PhpSegmenter(TreeSitterSegmenter):
